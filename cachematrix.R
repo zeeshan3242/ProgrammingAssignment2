@@ -1,5 +1,5 @@
 ## To calculate the inverse of a matric in a nefficient way - we use Cache memory to retrive the inverse of the 
-## matrix if its already calculated
+## matrix if its already calculated..
 
 
 ## Following function takes a matrix, defines setter getter funtoin and puts the inverse of the matrix into cache 
