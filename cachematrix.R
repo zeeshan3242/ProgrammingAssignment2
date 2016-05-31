@@ -1,7 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## To calculate the inverse of a matric in a nefficient way - we use Cache memory to retrive the inverse of the 
+## matrix if its already calculated
 
-## Write a short comment describing this function
+
+## Following function takes a matrix, defines setter getter funtoin and puts the inverse of the matrix into cache 
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -18,7 +19,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## Following function chekcs if there exists an inverse in the cache if yes then retrieves from the cache else calculates the inverse of the matrix
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
@@ -33,10 +34,9 @@ cacheSolve <- function(x, ...) {
   x$setInverse(m)
   return(m)
 }
-x <- stats::rnorm(16)
 
- dim(x) <- c(4,4)
-x
-solve(x) %*% x
-temp<-makeCacheMatrix(x)
-cacheSolve(temp)
+  x <- stats::rnorm(16)
+  dim(x) <- c(4,4)
+  
+cacheSolve(makeCacheMatrix(x))
+
